@@ -3,10 +3,20 @@
 
 int main() 
 {
-	int a,b; 
-	printf("Unesite dva broja: ");
-	scanf(" %d %d", &a, &b);
-	int c = (a<b) ? a : b;
-	printf("Manja vrednost je %d\n", c);
+	int a[30]; 
+	int n,b; 
+	printf("Unesi n: ");
+	scanf(" %d", &n);
+	printf("Unesi elemente niza: ");
+	int i; 
+	for (i=0; i<n; i++) scanf("%d", &a[i]);
+	printf("Unesi broj br: ");
+	scanf(" %d", &b); 
+	int c = 0; 
+	for (i=0; i<n; i++) 
+	{
+		if (a[i] == b) c++; 
+	}
+	printf("Broj ponavljivanja broja %d u nizu je: %d\n", b, c);
 	return 0;
 }

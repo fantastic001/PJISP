@@ -1,12 +1,28 @@
 
+
+/*
+Program izracunava S = 1*2 + 2*3*4 + ... + (n+0)*(n+1)*...*(n+n)
+*/
+
 #include <stdio.h>
 
 int main() 
 {
-	int a,b; 
-	printf("Unesite dva broja: ");
-	scanf(" %d %d", &a, &b);
-	int c = (a<b) ? a : b;
-	printf("Manja vrednost je %d\n", c);
+	printf("Unesi n: "); 
+	int n; 
+	scanf(" %d", &n);
+	int s = 0; 
+	int i; 
+	for (i=1; i<=n; i++) 
+	{
+		int a = 1; 
+		int j;
+		for (j=0; j<=i; j++) 
+		{
+			a *= (i+j);
+		}
+		s += a; 
+	}
+	printf("S = %d\n", s);
 	return 0;
 }
