@@ -10,7 +10,7 @@ int main()
 	{
 		printf("Unesi n: "); 
 		scanf(" %d", &n);
-	} while (n<=0);
+	} while (n<0);
 	int i; 
 	for (i=1; i<=n; i++) res *= i; 
 	printf("Resenje je %d\n", res);
